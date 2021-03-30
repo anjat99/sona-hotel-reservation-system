@@ -1,0 +1,403 @@
+/*region CLIENT PART*/
+*{
+    scroll-behavior: smooth;
+}
+/*modal-autor*/
+#autor {
+    width: 20%;
+    padding: 8px;
+    border: none;
+    color: rgb(175, 170, 175);
+    transition: .6s;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+#autor:hover {
+    background:#138808;
+    color:#fff;
+}
+.modal0 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal0 .sadrzajModala0 {
+    background-color: #f4f4f4;
+    line-height: 1.5em;
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    animation-name: otvori;
+    animation-duration: 1.5s;
+}
+.modal0 .sadrzajModala0 p{
+    font-size: 15px;
+}
+.modal0 .sadrzajModala0 a {
+    color: #7CCD80;
+    text-decoration: none;
+}
+.modal0 .sadrzajModala0 a:hover {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+#zatvori0 a:hover{
+    background:#777;
+}
+.modal0 .sadrzajModala0 #autorImg {
+    width: 30%;
+    height: 30%;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+.modal0 .sadrzajModala0 #autorImg img {
+    width: 100%;
+    height: 100%;
+}
+.modal0 .sadrzajModala0 #zatvori0 {
+    float: right;
+    color: #ccc;
+    font-size: 25px;
+}
+.modal0 .sadrzajModala0 #zatvori0:hover, .modal0 .sadrzajModala0 #zatvori0:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+@keyframes otvori {
+    from {
+        opacity: 0;
+    }
+    top {
+        opacity: 1;
+    }
+}
+
+.odvoji{
+    margin-top: 10%;
+}
+.odvoji_login{
+    margin-top: 8%;
+}
+.navigation{
+    z-index: 1;
+}
+.icon_menu{
+    position: fixed;
+    top: 2.8%;
+    right: 4.5%;
+}
+.fa-star{
+    cursor: pointer;
+}
+ul{
+    list-style-type: none;
+}
+.err{
+    color: red;
+}
+.msgError{
+    color: red;
+    font-weight: bolder;
+    padding: 10px;
+}
+/** time **/
+input[type=time] {
+  border: none;
+  color: #2a2c2d;
+  font-size: 14px;
+  font-family: helvetica;
+  width: 180px;
+}
+
+/* Wrapper around the hour, minute, second, and am/pm fields as well as
+the up and down buttons and the 'X' button */
+input[type=time]::-webkit-datetime-edit-fields-wrapper {
+    display: flex;
+}
+
+/* The space between the fields - between hour and minute, the minute and
+second, second and am/pm */
+input[type=time]::-webkit-datetime-edit-text {
+    padding: 19px 4px;
+}
+
+/* The naming convention for the hour, minute, second, and am/pm field is
+`-webkit-datetime-edit-{field}-field` */
+
+/* Hour */
+input[type=time]::-webkit-datetime-edit-hour-field {
+    background-color: #f2f4f5;
+    border-radius: 15%;
+    padding: 19px 13px;
+}
+
+/* Minute */
+input[type=time]::-webkit-datetime-edit-minute-field {
+    background-color: #f2f4f5;
+    border-radius: 15%;
+    padding: 19px 13px;
+}
+
+/* AM/PM */
+input[type=time]::-webkit-datetime-edit-ampm-field {
+    background-color: #7155d3;
+    border-radius: 15%;
+    color: #fff;
+    padding: 19px 13px;
+}
+
+/* 'X' button for resetting/clearing time */
+input[type=time]::-webkit-clear-button {
+    display: none;
+}
+
+/* Up/Down arrows for incrementing/decrementing the value */
+input[type=time]::-webkit-inner-spin-button {
+    display: none;
+}
+
+
+
+/***********************************************************************/
+
+i.tim-icons.icon-zoom-split{
+    color: #000;
+    font-weight: bolder;
+}
+.notification{
+    color: #ff0000;
+    font-weight: bold;
+    border-right: 1px solid #fff;
+    text-align: center;
+}
+.contact-form input{
+    margin-bottom:7px;
+}
+
+#userNav li{
+    font-size: 13px;
+    font-weight: 700;
+    padding: 16px 28px 15px;
+    background: #dfa974;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#userNav li a{
+    color: #ffffff;
+}
+#main__section__user > div > h2,
+#main__section__user > div > div > h2
+{
+    text-align:center;
+
+}
+.sidebarNav{
+    top:20%;
+
+}
+.no-review{
+    margin-bottom: 5rem !important;
+}
+/*endregion*/
+
+/*region TOAST*/
+/*#popup-review {*/
+/*    visibility: hidden;*/
+/*    min-width: 250px;*/
+/*    margin-left: -125px;*/
+/*    background-color: #333;*/
+/*    color: #fff;*/
+/*    text-align: center;*/
+/*    border-radius: 2px;*/
+/*    padding: 16px;*/
+/*    position: fixed;*/
+/*    z-index: 1;*/
+/*    top: 20%;*/
+/*    right: 5%;*/
+/*    !*left: 50%;*!*/
+/*    !*bottom: 30px;*!*/
+/*    font-size: 17px;*/
+/*}*/
+
+/*#popup-review.show {*/
+/*    visibility: visible;*/
+/*    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;*/
+/*    animation: fadein 0.5s, fadeout 0.5s 2.5s;*/
+/*}*/
+
+/*@-webkit-keyframes fadein {*/
+/*    from {bottom: 0; opacity: 0;}*/
+/*    to {bottom: 5%; opacity: 1;}*/
+/*}*/
+
+/*@keyframes fadein {*/
+/*    from {bottom: 0; opacity: 0;}*/
+/*    to {bottom: 5%; opacity: 1;}*/
+/*}*/
+
+/*@-webkit-keyframes fadeout {*/
+/*    from {bottom: 5%; opacity: 1;}*/
+/*    to {bottom: 0; opacity: 0;}*/
+/*}*/
+
+/*@keyframes fadeout {*/
+/*    from {bottom: 5%; opacity: 1;}*/
+/*    to {bottom: 0; opacity: 0;}*/
+/*}*/
+/*endregion*/
+
+/*region ADMIN-PANEL PART*/
+.menu_table thead{
+    border_bottom: 20px solid #2b2b31 ;
+}
+
+.menu_table thead th{
+    font-size: 17px !important;
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    padding: 0 15px 0 15px;
+    line-height: 100%;
+    margin-bottom: 0;
+    border: none;
+}
+.menu_table tbody tr{
+    background-color: #28282d;
+    /*background-color: #344675;*/
+    border-bottom: 10px solid #2b2b31;
+}
+.menu_table tbody td{
+    padding: 15px;
+}
+.adminForm{
+    background: white;
+}
+.adminFormWhite,
+.adminForm{
+    background: white;
+    color: #000;
+}
+.adminIcons{
+    font-size: 17px !important;
+    margin: 3px;
+}
+.adminFormText{
+    color: #fff;
+}
+.purple-border textarea {
+    border: 1px solid #ba68c8;
+    border-radius: 5px;
+}
+.purple-border .form-control:focus {
+    border: 1px solid #ba68c8;
+    box-shadow: 0 0 0 0.2rem rgba(186, 104, 200, .25);
+}
+.iconHS{
+    font-size: 80px;
+}
+
+.ps__rail-y{
+    height: 800px !important;
+}
+.menu_table__user,
+.user_table__user{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.menu_table__meta,
+.user_table__meta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}.menu_table__meta h3,
+ .user_table__meta h3{
+     color: #fff;
+     display: block;
+     font-size: 16px;
+     font-weight: 500;
+     margin-bottom: 2px;
+ }
+.user_table__meta h3{
+    color: #000;
+}
+.menu_table__meta span,
+.user_table__meta span{
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+}
+.user_table__meta span{
+    color: #000;
+}
+#ddlRolesUserUpdate > option{
+    background: #fff;
+    color: #000;
+}
+
+input.btn.btn-warning.btnSubmitA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** hide fields for insert **/
+.add-type,
+.add-price,
+.add-navlink{
+    display: none;
+}
+.main__table-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 12px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.2px;
+}
+.main__table-text--green {
+    color: #5bceae;
+}
+.main__table {
+    width: 100%;
+    min-width: 990px;
+}
+.main__table tbody tr {
+    background-color: #28282d;
+    border-bottom: 10px solid #2b2b31;
+}
+.main__table tbody td {
+    padding: 15px;
+}
+.main__table td {
+    margin: 0 auto !important;
+    text-align: center;
+}
+.head__table {
+    color: #fff;
+    font-weight: bold;
+    border-right: 1px solid #fff;
+}
+.form-check input[type="checkbox"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+/*endregion*/
+
+
+
